@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IELTS Voice Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="practice-panel">
+      <div class="practice-main">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">IELTS Speaking Coach</p>
+            <h1>Practice a natural speaking test</h1>
+          </div>
+          <div class="session-pill">
+            <span class="status-dot"></span>
+            <span id="sessionState">Ready</span>
+          </div>
+        </header>
+
+        <div class="topic-row" aria-label="Quick topics">
+          <button class="topic-chip hometown" type="button" data-prompt="Let's talk about my hometown."><span></span>Hometown</button>
+          <button class="topic-chip study" type="button" data-prompt="Ask me about studying English."><span></span>Study</button>
+          <button class="topic-chip travel" type="button" data-prompt="I want to practice a travel topic."><span></span>Travel</button>
+          <button class="topic-chip food" type="button" data-prompt="Give me a food question."><span></span>Food</button>
+        </div>
+
+        <div id="conversation" class="conversation" aria-live="polite"></div>
+
+        <section class="answer-panel" aria-label="Answer controls">
+          <div class="transcript-card">
+            <span class="field-label">Your live answer</span>
+            <p id="transcript" class="transcript">Start speaking or type your answer below.</p>
+          </div>
+
+          <div class="controls">
+            <button id="startBtn" class="btn primary" type="button">
+              <span class="btn-icon record-icon" aria-hidden="true"></span>
+              Speak Answer
+            </button>
+            <button id="stopBtn" class="btn danger" type="button" disabled>
+              <span class="btn-icon stop-icon" aria-hidden="true"></span>
+              Stop
+            </button>
+          </div>
+
+          <div class="typed-fallback">
+            <input id="typedAnswer" type="text" placeholder="Type an answer, for example: I enjoy learning English because...">
+            <button id="sendTypedBtn" class="btn send" type="button">Send</button>
+          </div>
+
+          <audio id="responseAudio" controls></audio>
+          <p id="status" class="status">Ready to practice.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
